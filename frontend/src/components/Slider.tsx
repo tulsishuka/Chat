@@ -145,15 +145,13 @@ const Slider = ({
 
               <div className="relative">
 
-                {/* <div className="w-11 h-11 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold">
+                <div className="w-11 h-11 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold">
 
                   {user.username.charAt(0).toUpperCase()}
 
-                </div> */}
+                </div>
 
-                <div className="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold">
-  {user.username?.charAt(0).toUpperCase() || "?"}
-</div>
+                
 
                 <span
                   className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-[#0f172a]
