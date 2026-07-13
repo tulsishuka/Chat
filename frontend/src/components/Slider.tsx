@@ -66,7 +66,6 @@ const Slider = ({
     loadUsers();
   }, []);
 
-  // Listen for realtime user updates
   useEffect(() => {
     socket.on("usersUpdated", (updatedUsers: User[]) => {
       const filtered = updatedUsers.filter(
