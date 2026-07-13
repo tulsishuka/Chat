@@ -148,11 +148,13 @@ const ChatMessage = ({ selectedUser }: Props) => {
   };
 
   return (
-    <div className="flex flex-col flex-1 bg-slate-900">
+  
+
+    <div className="flex flex-col flex-1 bg-[#0a1124]">
 
       
 
-      <div className="h-16 border-b border-slate-800 px-6 flex items-center">
+      <div className="h-16 border-b border-[#161f35] px-6 flex items-center">
 
         <div>
 
@@ -173,7 +175,7 @@ const ChatMessage = ({ selectedUser }: Props) => {
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
 
         {!selectedUser && (
-          <div className="h-full flex justify-center items-center text-slate-500 text-xl">
+          <div className="h-full flex justify-center items-center text-[#A3ABC4] text-xl">
             Select a user to start chatting
           </div>
         )}
@@ -190,13 +192,13 @@ const ChatMessage = ({ selectedUser }: Props) => {
             <div
               className={`rounded-xl px-4 py-3 max-w-sm ${
                 msg.sender === currentUser
-                  ? "bg-blue-600"
-                  : "bg-slate-800"
+                  ? "bg-[#2563eb] text-white"
+                  : "bg-[#1f293d] text-white"
               }`}
             >
               <p>{msg.text}</p>
 
-              <div className="flex justify-between mt-2 text-xs">
+              <div className="flex justify-between mt-2 text-xs opacity-70">
 
                 <span>
                   {new Date(
@@ -232,9 +234,9 @@ const ChatMessage = ({ selectedUser }: Props) => {
       {/* Input */}
 
       {selectedUser && (
-        <div className="border-t border-slate-800 p-4">
+        <div className="border-t border-[#161f35] p-4">
 
-          <div className="bg-slate-800 rounded-xl flex items-center px-4 py-3 gap-3">
+          <div className="bg-[#1f293d] rounded-xl flex items-center px-4 py-3 gap-3 text-slate-400">
 
             <Plus size={18} />
 
@@ -255,7 +257,7 @@ const ChatMessage = ({ selectedUser }: Props) => {
                   sendMessage();
                 }
               }}
-              className="flex-1 bg-transparent outline-none text-white"
+              className="flex-1 bg-transparent outline-none text-white placeholder-slate-500"
               placeholder={`Message ${selectedUser}`}
             />
 
@@ -263,7 +265,7 @@ const ChatMessage = ({ selectedUser }: Props) => {
 
             <button
               onClick={sendMessage}
-              className="bg-blue-600 p-2 rounded-lg"
+              className="bg-[#2962ff] text-white p-2 rounded-lg"
             >
               <Send size={18} />
             </button>
